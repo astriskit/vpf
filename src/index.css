@@ -114,6 +114,10 @@ code {
   justify-content: center;
 }
 
+.justified-space-between {
+  justify-content: space-between;
+}
+
 .flex-column {
   display: flex;
   flex-direction: column;

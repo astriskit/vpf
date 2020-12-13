@@ -11,6 +11,8 @@ import { PHGraph } from "../PHGraph";
 import { TotalTrades } from "./TotalTrades";
 import { Profit } from "./Profit";
 import { HistorySelect } from "./HistorySelect/HistorySelect";
+import { Trading } from "./Trading";
+import { Holding } from "./Holding";
 
 export const SideBar = () => {
   const {
@@ -33,17 +35,19 @@ export const SideBar = () => {
         contentCls={"flex-column " + styles.tradingHistory}
       >
         <HistorySelect />
-        <div
-          className={"flex " + styles.flexRow}
-          style={{ marginBottom: "22px" }}
-        >
+        <div className={"flex " + styles.flexRow}>
           <TotalTrades />
           <Profit />
         </div>
         <PHGraph />
       </Collapse>
-      <Collapse label="Wallets" icon={<IconWallet />}>
-        Hello World
+      <Collapse
+        label="Training Wallet"
+        icon={<IconWallet />}
+        contentCls={"flex-column " + styles.trainingWallet}
+      >
+        <Trading />
+        <Holding />
       </Collapse>
     </aside>
   ) : null;

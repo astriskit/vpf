@@ -39,6 +39,11 @@ function App() {
       },
       selected: "week",
     },
+    trainingWallet: {
+      currency: "$",
+      trading: 34752,
+      holding: 4102,
+    },
   });
   return (
     <AppContext.Provider value={{ state, setState: dispatch }}>

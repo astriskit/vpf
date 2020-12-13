@@ -42,6 +42,19 @@
   align-items: stretch;
 }
 
-.tradingHistory > :last-child {
+.tradingHistory > :nth-child(2) {
+  margin-bottom: 22px;
+}
+
+.tradingHistory > :last-child,
+.trainingWallet > * > :last-child {
   width: 100%;
+}
+
+.trainingWallet > *:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.trainingWallet > * > :last-child > :first-child > :first-child {
+  margin-right: 6px;
 }
