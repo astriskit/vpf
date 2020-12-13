@@ -1,0 +1,22 @@
+.sideBar {
+  flex: 1;
+  min-width: 300px;
+  background-color: var(--color-black-dark);
+  min-height: 90vh;
+}
+
+@media screen and (max-width: 700px) {
+  .sideBar {
+    position: absolute;
+    top: 70px;
+    min-height: 70%;
+    max-height: 70%;
+    overflow: auto;
+    border-bottom-right-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+}
+
+.sideBar > *:last-child {
+  border-bottom: none;
+}

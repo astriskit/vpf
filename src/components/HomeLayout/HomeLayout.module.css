@@ -1,0 +1,16 @@
+.homeLayout {
+  background-color: var(--color-black-lighter);
+
+  overflow: hidden;
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+.homeLayout > :last-child {
+  align-items: flex-start;
+  justify-content: stretch;
+}
+
+.main {
+  flex: 3;
+}

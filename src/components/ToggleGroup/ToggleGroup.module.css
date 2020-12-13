@@ -1,0 +1,12 @@
+.toggleGroup {
+  display: flex;
+  justify-content: center;
+}
+.toggleGroup > :first-child {
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+.toggleGroup > :last-child {
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}

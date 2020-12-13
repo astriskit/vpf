@@ -1,0 +1,28 @@
+.avatar {
+  position: relative;
+}
+
+.avatar > img,
+.avatar > div {
+  border-radius: 50%;
+}
+
+.avatar > img {
+  object-fit: cover;
+  width: 32px;
+  height: 32px;
+}
+
+.avatar > div {
+  background-color: var(--color-blue);
+  color: white;
+
+  width: 18px;
+  height: 18px;
+
+  position: absolute;
+  right: -12px;
+  top: -6px;
+
+  padding: 2px;
+}

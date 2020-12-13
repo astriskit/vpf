@@ -1,24 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import { HomeLayout } from "./components";
+import { AppContext } from "./App.context";
 
 function App() {
+  const [state, dispatch] = useState({
+    sideBarOpen: true,
+    trainingMode: true,
+    filter: {
+      crypto: true,
+      commodities: false,
+      stock: true,
+      index: false,
+      currencies: false,
+    },
+  });
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppContext.Provider value={{ state, setState: dispatch }}>
+      <HomeLayout>
+        <div>Hello world!</div>
+      </HomeLayout>
+    </AppContext.Provider>
   );
 }
 
