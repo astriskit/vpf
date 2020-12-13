@@ -13,7 +13,7 @@ export const Collapse = ({
   const [openIn, setOpenIn] = useState(defaultOpen);
 
   useEffect(() => {
-    setOpenIn(open);
+    typeof open === "boolean" && setOpenIn(open);
   }, [open]);
 
   const toggleOpenIn = () => {

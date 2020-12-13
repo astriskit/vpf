@@ -48,7 +48,9 @@ function App() {
   return (
     <AppContext.Provider value={{ state, setState: dispatch }}>
       <HomeLayout>
-        <div>Hello world!</div>
+        {/* {
+          Card content and filters : to-be-contd...
+        } */}
       </HomeLayout>
     </AppContext.Provider>
   );

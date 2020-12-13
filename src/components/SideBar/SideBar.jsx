@@ -25,6 +25,7 @@ export const SideBar = () => {
         label="Open Trades"
         icon={<IconBeats />}
         contentCls={"flex " + styles.flexRow}
+        defaultOpen={false}
       >
         <TradesInProgress />
         <ClosestOutcome />
