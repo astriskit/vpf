@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import styles from "./Collapse.module.css";
 
 export const Collapse = ({
+  contentCls = "",
   open,
   toggleOpen,
   label,
@@ -38,7 +39,9 @@ export const Collapse = ({
         <span className="type-links-caption">{label}</span>
         <span className={openIn ? "" : styles.collapseOpen}>›</span>
       </div>
-      {openIn && <div className={styles.children}>{children}</div>}
+      {openIn && (
+        <div className={`${styles.children} ${contentCls}`}>{children}</div>
+      )}
     </div>
   );
 };

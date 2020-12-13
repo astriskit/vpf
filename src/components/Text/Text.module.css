@@ -1,0 +1,6 @@
+.bodySmallCaption {
+  color: var(--color-grey);
+}
+.groupSmallCaption {
+  align-items: flex-start;
+}

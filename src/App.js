@@ -13,6 +13,32 @@ function App() {
       index: false,
       currencies: false,
     },
+    openTrades: {
+      inProgress: 15,
+      closestOutcome: {
+        period: 25 * 60 + 40,
+        assetTitle: "ETH 48 hour",
+      },
+    },
+    tradingHistory: {
+      day: {
+        trades: 2,
+        profitPercent: "+2.5%",
+      },
+      week: {
+        trades: 42,
+        profitPercent: "+14.5%",
+      },
+      month: {
+        trades: 142,
+        profitPercent: "+25.5%",
+      },
+      all: {
+        trades: 542,
+        profitPercent: "+30.5%",
+      },
+      selected: "week",
+    },
   });
   return (
     <AppContext.Provider value={{ state, setState: dispatch }}>

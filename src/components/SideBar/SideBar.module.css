@@ -1,6 +1,6 @@
 .sideBar {
   flex: 1;
-  min-width: 300px;
+  min-width: 260px;
   background-color: var(--color-black-dark);
   min-height: 90vh;
 }
@@ -19,4 +19,29 @@
 
 .sideBar > *:last-child {
   border-bottom: none;
+}
+
+.flexRow {
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.flexRow > * {
+  flex: 1;
+}
+
+.flexRow > :first-child {
+  margin-right: 20px;
+}
+
+.flexRow > * > *:not(:last-child) {
+  margin-bottom: 4px;
+}
+
+.tradingHistory {
+  align-items: stretch;
+}
+
+.tradingHistory > :last-child {
+  width: 100%;
 }
