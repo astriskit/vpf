@@ -1,7 +1,15 @@
 import commStyles from "./common.module.css";
 import styles from "./ToggleGroup.module.css";
+import { ToggleProps } from "./Toggle/Toggle";
 
-export const ToggleGroup = ({
+interface ToggleGroupProps extends ToggleProps {
+  onLabel: React.ReactNode;
+  offLabel: React.ReactNode;
+  getOnCls?(): string;
+  getOffCls?(): string;
+}
+
+export const ToggleGroup: React.FC<ToggleGroupProps> = ({
   className = "",
   onToggle,
   isOn = false,

@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { HomeLayout } from "./components";
 import { AppContext } from "./App.context";
+import { AppState } from "./AppState.type";
 
 function App() {
-  const [state, setState] = useState({
+  const [state, setState] = useState<AppState>({
     sideBarOpen: true,
     trainingMode: true,
     filter: {

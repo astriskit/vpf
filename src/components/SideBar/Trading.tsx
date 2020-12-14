@@ -1,25 +1,26 @@
 import { useContext } from "react";
 import { Button } from "../Button/Button";
-import { Text } from "../Text/Text";
+import { GroupSmallCaption, NumberBig } from "../Text/Text";
 import { AppContext } from "../../App.context";
 import { formatNum } from "../../utils";
 
 export const Trading = () => {
-  const {
-    state: {
-      trainingWallet: { currency, trading },
-    },
-  } = useContext(AppContext);
+  const { state } = useContext(AppContext);
+
+  const { currency, trading } = state?.trainingWallet ?? {
+    currency: "-",
+    trading: "-",
+  };
 
   return (
-    <Text.GroupSmallCaption caption="Trading">
+    <GroupSmallCaption caption="Trading">
       <div className="flex justified-space-between">
-        <Text.NumberBig>
+        <NumberBig>
           <span>{currency}</span>
           <span>{formatNum(trading)}</span>
-        </Text.NumberBig>
+        </NumberBig>
         <Button>Top Up</Button>
       </div>
-    </Text.GroupSmallCaption>
+    </GroupSmallCaption>
   );
 };
