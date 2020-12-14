@@ -6,7 +6,7 @@ import { IconTrending } from "../IconTrending";
 import { IconBeats } from "../IconBeats";
 import { IconWallet } from "../IconWallet";
 import { ClosestOutcome } from "./ClosestOutcome";
-import { PHGraph } from "../PHGraph";
+import PHGraph from "../PHGraph.svg";
 import { TotalTrades } from "./TotalTrades";
 import { Profit } from "./Profit";
 import { HistorySelect } from "./HistorySelect/HistorySelect";
@@ -40,7 +40,7 @@ export const SideBar = () => {
           <TotalTrades />
           <Profit />
         </div>
-        <PHGraph />
+        <img src={PHGraph} alt="placeholder-graph" />
       </Collapse>
       <Collapse
         label="Training Wallet"
