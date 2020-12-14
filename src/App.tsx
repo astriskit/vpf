@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { HomeLayout } from "./components";
 import { AppContext } from "./App.context";
+import { AppState } from "./AppState.type";
 
 function App() {
-  const [state, dispatch] = useState({
+  const [state, setState] = useState<AppState>({
     sideBarOpen: true,
     trainingMode: true,
     filter: {
@@ -46,7 +47,7 @@ function App() {
     },
   });
   return (
-    <AppContext.Provider value={{ state, setState: dispatch }}>
+    <AppContext.Provider value={{ state, setState }}>
       <HomeLayout>
         {/* {
           Card content and filters : to-be-contd...

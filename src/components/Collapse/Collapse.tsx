@@ -1,7 +1,17 @@
 import { useEffect, useState } from "react";
 import styles from "./Collapse.module.css";
 
-export const Collapse = ({
+interface CollapseType {
+  contentCls?: string;
+  open?: boolean;
+  toggleOpen?(): void;
+  label: string;
+  icon: React.ReactNode;
+  children: React.ReactNode;
+  defaultOpen?: boolean;
+}
+
+export const Collapse: React.FC<CollapseType> = ({
   contentCls = "",
   open,
   toggleOpen,

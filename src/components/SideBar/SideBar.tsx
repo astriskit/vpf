@@ -1,9 +1,8 @@
 import React, { useContext } from "react";
 import { TradesInProgress } from "./TradesInProgress";
 import { Collapse } from "../Collapse/Collapse";
-import { AppContext } from "../../App.context";
+import { AppContext, TypeAppContext } from "../../App.context";
 import { IconTrending } from "../IconTrending";
-import styles from "./SideBar.module.css";
 import { IconBeats } from "../IconBeats";
 import { IconWallet } from "../IconWallet";
 import { ClosestOutcome } from "./ClosestOutcome";
@@ -13,11 +12,12 @@ import { Profit } from "./Profit";
 import { HistorySelect } from "./HistorySelect/HistorySelect";
 import { Trading } from "./Trading";
 import { Holding } from "./Holding";
+import styles from "./SideBar.module.css";
 
 export const SideBar = () => {
-  const {
-    state: { sideBarOpen: open },
-  } = useContext(AppContext);
+  const { state } = useContext<TypeAppContext>(AppContext);
+
+  const open = state?.sideBarOpen;
 
   return open ? (
     <aside className={styles.sideBar}>

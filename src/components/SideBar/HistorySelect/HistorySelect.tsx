@@ -1,34 +1,35 @@
 import { useContext } from "react";
 import { AppContext } from "../../../App.context";
-import { Text } from "../../Text/Text";
+import { BodySmallCaption } from "../../Text/Text";
 import { Toggle } from "../../ToggleGroup/Toggle/Toggle";
+import { TradeSelect } from "../../../AppState.type";
 import styles from "./HistorySelect.module.css";
 
 export const HistorySelect = () => {
   const { state, setState } = useContext(AppContext);
 
-  const {
-    tradingHistory: { selected },
-  } = state;
+  const selected = state?.tradingHistory?.selected;
 
-  const isOn = (key) => selected === key;
-  const toggleHistory = (key) => () => {
-    if (!selected || (selected && selected !== key)) {
-      setState({
-        ...state,
-        tradingHistory: { ...state.tradingHistory, selected: key },
-      });
-    } else if (selected === key) {
-      setState({
-        ...state,
-        tradingHistory: { ...state.tradingHistory, selected: "" },
-      });
+  const isOn = (key: TradeSelect) => selected === key;
+  const toggleHistory = (key: TradeSelect) => () => {
+    if (state?.tradingHistory) {
+      if (!selected || (selected && selected !== key)) {
+        setState({
+          ...state,
+          tradingHistory: { ...state.tradingHistory, selected: key },
+        });
+      } else if (selected === key) {
+        setState({
+          ...state,
+          tradingHistory: { ...state.tradingHistory, selected: "" },
+        });
+      }
     }
   };
 
   return (
     <div className={`flex ${styles.historySelect}`}>
-      <Text.BodySmallCaption>Last</Text.BodySmallCaption>
+      <BodySmallCaption>Last</BodySmallCaption>
       <div className="flex">
         <Toggle
           className={`type-body-caption ${styles.toggle} ${
