@@ -9,10 +9,15 @@ const Text: React.FC<TextProps> = ({ children, className = "" }) => {
   return <div className={className}>{children}</div>;
 };
 
-const BodySmallCaption: React.FC<Omit<TextProps, "className">> = ({
+const BodySmallCaption: React.FC<TextProps> = ({
   children,
+  className = "",
 }) => (
-  <Text className={styles.bodySmallCaption + " type-body-small-caption-9-px"}>
+  <Text
+    className={
+      styles.bodySmallCaption + " type-body-small-caption-9-px" + className
+    }
+  >
     {children}
   </Text>
 );
@@ -21,12 +26,20 @@ const NumberBig: React.FC<Omit<TextProps, "className">> = ({ children }) => (
   <Text className="type-number-big">{children}</Text>
 );
 
+const NumberTitle: React.FC<Omit<TextProps, "className">> = ({ children }) => (
+  <Text className="type-number-title">{children}</Text>
+);
+
 const NumberMedium: React.FC<Omit<TextProps, "className">> = ({ children }) => (
   <Text className="type-number-medium">{children}</Text>
 );
 
 const BodyTitle: React.FC<Omit<TextProps, "className">> = ({ children }) => (
   <Text className="type-body-title">{children}</Text>
+);
+
+const BodyMedium: React.FC<Omit<TextProps, "className">> = ({ children }) => (
+  <Text className="type-body-medium">{children}</Text>
 );
 
 const BodyCaption: React.FC<Omit<TextProps, "className">> = ({ children }) => (
@@ -55,8 +68,10 @@ export {
   Text,
   BodySmallCaption,
   NumberBig,
+  NumberTitle,
   NumberMedium,
   BodyTitle,
+  BodyMedium,
   BodyCaption,
   ButtonLabelSmall,
   GroupSmallCaption,

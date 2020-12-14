@@ -1,0 +1,53 @@
+.homeLayout {
+  padding: 36px 52px 36px 39px;
+  overflow: auto;
+}
+
+.homeLayout > :global.assetCard {
+  margin-bottom: 20px;
+  align-items: center;
+  position: relative;
+
+  height: 88px;
+}
+
+.homeLayout > :global(.assetCard:first-child) {
+  margin-top: 28px;
+}
+.homeLayout > :global.assetCard > * {
+  flex: 1;
+}
+.homeLayout > :global.assetCard > :first-child {
+  border-right: 1px dashed var(--color-grey);
+  margin-right: 25px;
+}
+
+.homeLayout :global(.asset) {
+  align-items: flex-start;
+}
+
+.homeLayout :global(.asset) > :first-child {
+  margin-right: 11px;
+  margin-top: 2px;
+}
+
+.homeLayout :global(.asset) > :last-child > :last-child {
+  text-transform: uppercase;
+}
+
+.homeLayout :global(.asset) > :last-child > :last-child,
+.homeLayout :global(.prediction) > :last-child,
+.homeLayout :global(.totalComFunds) > :last-child {
+  margin-top: 4px;
+  color: var(--color-grey);
+}
+
+.homeLayout :global(.prediction) > :first-child > :first-child {
+  margin-right: 16px;
+}
+.homeLayout :global(.totalComFunds) > :last-child {
+  text-align: right;
+}
+.homeLayout :global(.totalComFunds) > :first-child > :first-child {
+  margin-right: 10px;
+}

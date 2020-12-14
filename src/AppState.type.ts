@@ -5,6 +5,7 @@ type Filter = {
   index: boolean;
   currencies: boolean;
 };
+
 type OpenTrades = {
   inProgress: number;
   closestOutcome: {
@@ -18,7 +19,21 @@ export type HistRec = {
 };
 
 export type TradeSelect = "all" | "week" | "month" | "day" | ""
+export type Category = "crypto" | "commodities" | "index" | "currencies" | "stock"
 
+export type Asset = {
+  idx: number,
+  title: string,
+  category: Category,
+  active: boolean,
+  counter?: number,
+  tcfPercent: number,
+  tcfValue: number,
+  tcfCurrency: string,
+  predictionTitle: string,
+  predictionPeriod: number,
+  favourite: boolean
+}
 
 export type AppState = {
   sideBarOpen: boolean;
@@ -37,4 +52,5 @@ export type AppState = {
     trading: number;
     holding: number;
   };
+  assets?: Asset[]
 };

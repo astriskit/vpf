@@ -1,7 +1,37 @@
 import { useState } from "react";
-import { HomeLayout } from "./components";
+import { AssetCard, HomeLayout } from "./components";
 import { AppContext } from "./App.context";
-import { AppState } from "./AppState.type";
+import { AppState, Category } from "./AppState.type";
+import styles from "./App.module.css";
+
+const data = [
+  {
+    idx: 123,
+    title: "ETH 48 hours",
+    category: "crypto" as Category,
+    active: true,
+    counter: 0,
+    tcfPercent: 34,
+    tcfValue: 123223,
+    tcfCurrency: "$",
+    predictionTitle: "2,2x",
+    predictionPeriod: 6 * (60 * 60) + 41 * 60,
+    favourite: false,
+  },
+  {
+    idx: 124,
+    title: "Gold Dec 31",
+    category: "commodities" as Category,
+    active: true,
+    counter: 0,
+    tcfPercent: 24,
+    tcfValue: 432111,
+    tcfCurrency: "$",
+    predictionTitle: "2,2x",
+    predictionPeriod: 2 * (60 * 60) + 5 * 60,
+    favourite: true,
+  },
+];
 
 function App() {
   const [state, setState] = useState<AppState>({
@@ -45,13 +75,21 @@ function App() {
       trading: 34752,
       holding: 4102,
     },
+    assets: data,
   });
+
+  const selectedFilters = Object.entries(state.filter)
+    .filter(([_, value]): boolean => value)
+    .map(([key]) => key);
+
   return (
     <AppContext.Provider value={{ state, setState }}>
-      <HomeLayout>
-        {/* {
-          Card content and filters : to-be-contd...
-        } */}
+      <HomeLayout contentCls={styles.homeLayout}>
+        {state?.assets
+          ?.filter(({ category }) => selectedFilters.includes(category))
+          .map(({ idx, ...assetProps }) => (
+            <AssetCard {...assetProps} key={idx} />
+          )) ?? null}
       </HomeLayout>
     </AppContext.Provider>
   );

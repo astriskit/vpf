@@ -1,0 +1,6 @@
+.assetCard {
+  border-radius: 8px;
+  border: 1px solid var(--color-grey);
+  padding: 12px 32px 14px 14px;
+  background-color: var(--color-black-light);
+}

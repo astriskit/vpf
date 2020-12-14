@@ -19,6 +19,7 @@ code {
   --color-green: #9ac802;
   --color-yellow-lighter: rgba(246, 255, 142, 0.75);
   --color-yellow: rgba(245, 255, 136, 0);
+  --color-black-light: #272a2d;
   --color-black-lighter: #1e2122;
   --color-black-dark: #181b1c;
   --color-grey: #666e79;
@@ -129,4 +130,24 @@ code {
 
 * {
   color: #fff;
+}
+
+.type-body-medium {
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.type-number-title {
+  font-family: Roboto Mono;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: right;
 }
