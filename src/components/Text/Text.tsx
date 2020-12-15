@@ -15,7 +15,7 @@ const BodySmallCaption: React.FC<TextProps> = ({
 }) => (
   <Text
     className={
-      styles.bodySmallCaption + " type-body-small-caption-9-px" + className
+      styles.bodySmallCaption + " type-body-small-caption-9-px " + className
     }
   >
     {children}

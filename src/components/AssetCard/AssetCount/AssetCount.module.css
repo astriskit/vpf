@@ -1,9 +1,7 @@
 .assetCount {
   background-color: var(--color-blue);
+  color: white;
   padding: 3px 9px 5px 9px;
   border-bottom-left-radius: 50%;
   border-bottom-right-radius: 50%;
-
-  min-width: 24px;
-  min-height: 20px;
 }

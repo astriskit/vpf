@@ -51,3 +51,9 @@
 .homeLayout :global(.totalComFunds) > :first-child > :first-child {
   margin-right: 10px;
 }
+
+.homeLayout :global(.assetCount) {
+  position: absolute;
+  top: 0px;
+  right: 32px;
+}
