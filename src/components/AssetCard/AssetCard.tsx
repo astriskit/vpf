@@ -21,7 +21,9 @@ export const AssetCard: React.FC<Omit<AssetCardProps, "idx">> = ({
   const tcf = tcfValue || tcfPercent; // tcfValue | tcfPercent
   return (
     <div
-      className={`assetCard flex justified-space-between ${styles.assetCard}`}
+      className={`assetCard flex justified-space-between ${
+        !active ? "inActive" : ""
+      } ${styles.assetCard}`}
     >
       <Asset isFavourite={favourite} type={category}>
         {title}

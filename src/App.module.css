@@ -57,3 +57,16 @@
   top: -1px;
   right: 32px;
 }
+
+.homeLayout
+  :global(.assetCard.inActive)
+  > :global(.asset)
+  > :last-child
+  > :first-child,
+.homeLayout
+  :global(.assetCard.inActive)
+  > :global(.totalComFunds)
+  > :first-child {
+  color: #fff;
+  opacity: 0.5;
+}
