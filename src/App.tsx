@@ -22,7 +22,7 @@ const data = [
     idx: 124,
     title: "Gold Dec 31",
     category: "commodities" as Category,
-    active: true,
+    active: false,
     counter: 2,
     tcfPercent: 24,
     tcfValue: 432111,

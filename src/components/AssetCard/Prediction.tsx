@@ -12,7 +12,7 @@ export const Prediction: React.FC<PredictionProps> = ({
   isActive,
   period,
 }) => {
-  let caption = isActive ? "Outcome in " : "Prediction in ";
+  let caption = isActive ? "Outcome in " : "Open in ";
 
   if (period) {
     const hour = Number.parseInt("" + period / (60 * 60));
