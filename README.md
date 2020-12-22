@@ -1,3 +1,4 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/e58a9492-01a3-4d1b-82ff-99ea67b18095/deploy-status)](https://app.netlify.com/sites/astriskit-vpf/deploys)
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
